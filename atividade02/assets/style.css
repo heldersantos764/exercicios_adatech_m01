@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --shadow: #222222;
     --color01: #29252b;
@@ -58,6 +59,20 @@ main{
     flex-direction: column;
 }
 
+.form-control fieldset{
+    padding: var(--space-min);
+    border-radius: 5px;
+    background-color: var(--color01);
+}
+
+.form-control fieldset legend{
+    padding: 0 5px;
+}
+
+.form-control fieldset label{
+    padding-right: var(--space-min);
+}
+
 .form-control input{
     outline: none;
     border: 2px solid var(--color01);
@@ -67,6 +82,10 @@ main{
     font-weight: 300;
     padding: 8px;
     border-radius: 5px;
+}
+
+.form-control input[type=radio]{
+    accent-color: var(--color-neon);
 }
 
 .form-control label{
@@ -104,4 +123,34 @@ main{
 .form-control input:focus{
     box-shadow: 0 0 5px var(--color-neon);
     border: 2px solid var(--color-neon);
+}
+
+.tabela{
+    padding: var(--space-min) 0;
+}
+
+.tabela table{
+    background-color: #4e4a51;
+    width: 100%;
+    margin: 0;
+    border-spacing: 0;
+}
+
+.tabela table thead tr{
+    background-color: var(--color-neon);
+}
+
+.tabela table thead tr th{
+    color: var(--color01);
+    text-align: left;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.tabela table tr td, .tabela table tr th{
+    padding: 10px var(--space-min);
+}
+
+.tabela table tr:nth-child(even) {
+    background: var(--color02);
 }

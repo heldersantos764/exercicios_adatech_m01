@@ -1,5 +1,34 @@
 const form = document.querySelector('#form')
-const table = document.querySelector('#table')
+const table = document.querySelector('#table>tbody')
+
+const findPeople = async () => {
+    try {
+        const data = await fetch(form.getAttribute('action'), {
+            method: 'GET',
+            mode: 'cors'
+        })
+
+        const response = await data.json()
+        const people = response.data;
+        let html = "";
+
+        people.map((person) => {
+            html += `<tr>
+                <td>${person['name']}</td>
+                <td>${person['age']}</td>
+                <td>${person['email']}</td>
+                <td>${person['gender']}</td>
+            </tr>`;
+        })
+
+        table.innerHTML = html;
+
+
+    } catch (error) {
+        alert('Erro ao buscar registros.');
+    }
+}
+
 
 form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -7,20 +36,23 @@ form.addEventListener('submit', async event => {
     const formData = new FormData(form)
 
     try {
-        const data = await fetch('api/Register.php', {
-            method: 'POST',
+        const data = await fetch(form.getAttribute('action'), {
+            method: form.getAttribute('method'),
             mode: 'cors',
             body: formData
         })
 
         const response = await data.json()
 
-        console.log(response)
+        alert(response.message)
+
+        findPeople();
 
     } catch (error) {
         console.error("Error: ", error)
     }
-
 })
 
-document.onload(alert())
+window.onload = () => {
+    findPeople();
+}
