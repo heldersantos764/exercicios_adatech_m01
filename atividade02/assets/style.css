@@ -28,7 +28,7 @@ body{
 }
 
 main{
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     padding: var(--space-min);
     box-sizing: border-box;
@@ -84,8 +84,12 @@ main{
     border-radius: 5px;
 }
 
-.form-control input[type=radio]{
+.form-control input[type=radio], input[type=checkbox]{
     accent-color: var(--color-neon);
+}
+
+.checkbox{
+    margin-bottom: var(--space-min);
 }
 
 .form-control label{

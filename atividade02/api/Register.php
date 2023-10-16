@@ -12,7 +12,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 //verify request method
 if ($method === 'POST') {
 
-    $sql = "INSERT INTO person (name, age, email, gender) VALUES (:name, :age, :email, :gender)";
+    $sql = "INSERT INTO person (name, age, email, gender, notification) VALUES (:name, :age, :email, :gender, :notification)";
 
     $statement = $conection->prepare($sql);
 
@@ -21,6 +21,7 @@ if ($method === 'POST') {
         ':age' => filter_input(INPUT_POST, 'age', FILTER_SANITIZE_SPECIAL_CHARS),
         ':email' => filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL),
         ':gender' => filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_SPECIAL_CHARS),
+        ':notification' => isset($_POST['notification'])?1:0,
     ]);
 
     $lastId = $conection->lastInsertId();
@@ -45,8 +46,7 @@ if ($method === 'POST') {
     $sql = $conection->query('SELECT * FROM person');
 
     $response = [
-        'status' => '500',
-        'message' => 'Erro ao cadastrar usuário.',
+        'status' => '200',
         'data' => $sql->fetchAll()
     ];
 

@@ -18,11 +18,15 @@ const findPeople = async () => {
                 <td>${person['age']}</td>
                 <td>${person['email']}</td>
                 <td>${person['gender']}</td>
+                <td>${person['notification']?"Sim":"Não"}</td>
             </tr>`;
         })
 
-        table.innerHTML = html;
-
+        if(html !== ""){
+            table.innerHTML = html;
+        }
+        
+        form.reset();
 
     } catch (error) {
         alert('Erro ao buscar registros.');
@@ -34,6 +38,10 @@ form.addEventListener('submit', async event => {
     event.preventDefault();
 
     const formData = new FormData(form)
+
+    console.log(document.querySelector('#notification').checked)
+
+    form.setAttribute('notification', document.querySelector('#notification').checked)
 
     try {
         const data = await fetch(form.getAttribute('action'), {

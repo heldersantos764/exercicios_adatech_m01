@@ -13,39 +13,86 @@
           <div class="titulo">
             <h1>Cadastro de Participante</h1>
           </div>
-          <form id="form" action="api/Register.php" method="post">
+          <form
+            id="form"
+            action="https://aulasadatech.000webhostapp.com/Register.php"
+            method="post"
+          >
             <div class="form-control">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required autofocus minlength="5" maxlength="80"/>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autofocus
+                minlength="5"
+                maxlength="80"
+              />
             </div>
 
             <div class="form-control">
               <label for="age">Idade</label>
-              <input type="number" id="age" name="age" required min="18" max="100" />
+              <input
+                type="number"
+                id="age"
+                name="age"
+                required
+                min="18"
+                max="100"
+              />
             </div>
 
             <div class="form-control">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email"required />
+              <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-control">
               <fieldset>
                 <legend>Sexo</legend>
                 <div>
-                  <input type="radio" name="gender" value="Masculino" id="masculino" checked>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Masculino"
+                    id="masculino"
+                    checked
+                  />
                   <label for="masculino">Masculino</label>
-                  <input type="radio" name="gender" value="Feminino" id="feminino">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Feminino"
+                    id="feminino"
+                  />
                   <label for="feminino">Feminino</label>
-                  <input type="radio" name="gender" value="Não informado" id="outros">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Não informado"
+                    id="outros"
+                  />
                   <label for="outros">Prefiro não informar</label>
                 </div>
               </fieldset>
             </div>
 
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                id="notification"
+                name="notification"
+                value="1"
+              />
+              <label for="notification">Receber notificações e-mail</label>
+            </div>
+
             <div class="button-control">
-              <button type="reset">Cancelar</button>
-              <button type="submit">Enviar</button>
+              <div>
+                <button type="reset">Cancelar</button>
+                <button type="submit">Enviar</button>
+              </div>
             </div>
           </form>
         </div>
@@ -58,15 +105,13 @@
                 <th>idade</th>
                 <th>E-mail</th>
                 <th>Sexo</th>
+                <th>Notificações</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td colspan="5">Nenhum usuário cadastrado</td>
               </tr>
             </tbody>
           </table>
