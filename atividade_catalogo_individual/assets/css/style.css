@@ -337,4 +337,42 @@ footer .logo figure, footer .logo img{
     top: -40px;
 }
 
+/* =========================CARRINHO DE COMPRAS============================== */
+#header-carrinho{
+    height: 100px;
+    box-sizing: border-box;
+}
 
+#header-carrinho a#voltar-circular{
+    color: var(--color-light);
+}
+
+#header-carrinho a#voltar-circular:hover{
+    color: var(--color-secondary);
+}
+
+#tabela-carrinho tbody tr, #tabela-carrinho tbody tr td{
+    height: 80px;
+}
+
+.carrinho-produto figure, .carrinho-produto figure img{
+    width: 80px;
+    margin-right: 20px;
+}
+
+.contador-produtos{
+    height: 100%;
+}
+
+.contador-produtos input{
+    width: 45px; 
+    border: 1px solid var(--color-dark);
+    margin: 0 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.contador-produtos .btn{
+    padding-right: 15px;
+    padding-left: 15px;
+}

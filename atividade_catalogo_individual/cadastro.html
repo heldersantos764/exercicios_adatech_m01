@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Página de venda de produtos alimentícios"/>
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Helder dos Santos Sousa" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <title>Burguer Atelier</title>
+    </head>
+
+    <body class="bg-imagem d-flex align-items-center justify-content-center">
+        
+        <div class="container d-flex align-items-center justify-content-center">
+            <section id="form-login" class="col-12 col-lg-5 col-sm-8">
+
+                <div class="titulo-login">
+                    <h1 class="text-white fs-3">Cadastre-se</h1>
+                </div>
+
+                <div class="formulario">
+                    <form method="post" action="#">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text-white">Nome Completo</label>
+                            <input type="email" class="form-control" name="nome" id="nome" required>
+                          </div>
+                        <div class="mb-3">
+                          <label for="usuario" class="form-label text-white">E-mail</label>
+                          <input type="email" class="form-control" name="email" id="usuario" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="senha" class="form-label text-white">Senha</label>
+                          <input type="password" class="form-control" name="senha" id="senha" required minlength="8" maxlength="16">
+                        </div>
+                        <div class="mb-3">
+                            <label for="c-senha" class="form-label text-white">Confirmar Senha</label>
+                            <input type="password" class="form-control" name="confirmar-senha" id="c-senha" required minlength="8" maxlength="16">
+                          </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Cadastrar-se</button>
+                        </div>
+                    </form>
+
+                      <div class="d-flex justify-content-center mt-3">
+                        <a href="login.html" class="text-white text-decoration-none">Fazer Login</a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </body>
+</html>    
